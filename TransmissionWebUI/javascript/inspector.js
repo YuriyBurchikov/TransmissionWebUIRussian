@@ -182,9 +182,9 @@ function Inspector(controller) {
 			if( !haveUnverified && !leftUntilDone )
 				str = fmt.size(haveVerified) + ' (100%)';
 			else if( !haveUnverified )
-				str = fmt.size(haveVerified) + ' of ' + fmt.size(sizeWhenDone) + ' (' + str +'%)';
+				str = fmt.size(haveVerified) + ' из ' + fmt.size(sizeWhenDone) + ' (' + str +'%)';
 			else
-				str = fmt.size(haveVerified) + ' of ' + fmt.size(sizeWhenDone) + ' (' + str +'%), ' + fmt.size(haveUnverified) + ' Unverified';
+				str = fmt.size(haveVerified) + ' из ' + fmt.size(sizeWhenDone) + ' (' + str +'%), ' + fmt.size(haveUnverified) + ' Не подтверждено';
 		}
 		setTextContent(e.have_lb, str);
 
@@ -240,7 +240,7 @@ function Inspector(controller) {
 					u += t.getUploadedEver();
 				}
 			}
-			str = fmt.size(u) + ' (Ratio: ' + fmt.ratioString( Math.ratio(u,d))+')';
+			str = fmt.size(u) + ' (Рейтинг: ' + fmt.ratioString( Math.ratio(u,d))+')';
 		}
 		setTextContent(e.uploaded_lb, str);
 
@@ -352,9 +352,9 @@ function Inspector(controller) {
 			if(!size)
 				str = none;
 			else if(pieceSize > 0)
-				str = fmt.size(size) + ' (' + pieces.toStringWithCommas() + ' pieces @ ' + fmt.mem(pieceSize) + ')';
+				str = fmt.size(size) + ' (' + pieces.toStringWithCommas() + ' частей @ ' + fmt.mem(pieceSize) + ')';
 			else
-				str = fmt.size(size) + ' (' + pieces.toStringWithCommas() + ' pieces)';
+				str = fmt.size(size) + ' (' + pieces.toStringWithCommas() + ' частей)';
 		}
 		setTextContent(e.size_lb, str);
 
@@ -634,7 +634,7 @@ function Inspector(controller) {
 			html.push('<table class="peer_list">',
 			          '<tr class="inspector_peer_entry even">',
 			          '<th class="encryptedCol"></th>',
-			          '<th class="upCol">Отгрузка</th>',
+			          '<th class="upCol">Отдача</th>',
 			          '<th class="downCol">Загрузка</th>',
 			          '<th class="percentCol">%</th>',
 			          '<th class="statusCol">Статус</th>',
