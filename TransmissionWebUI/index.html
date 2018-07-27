@@ -91,31 +91,31 @@
 					<div class="prefs-section">
 						<div class="title">Загрузка</div>
 						<div class="row"><div class="key">Загрузить в:</div><div class="value"><input type="text" id="download-dir"/></div></div>
-						<div class="checkbox-row"><input type="checkbox" id="start-added-torrents"/><label for="start-added-torrents">Начать при добавлении</label></div>
+						<div class="checkbox-row"><input type="checkbox" id="start-added-torrents"/><label for="start-added-torrents">Запустить при добавлении</label></div>
 						<div class="checkbox-row"><input type="checkbox" id="rename-partial-files"/><label for="rename-partial-files">Добавить &quot;.part&quot; к именам не до конца загруженных файлов</label></div>
 					</div>
 					<div class="prefs-section">
 						<div class="title">Раздача</div>
-						<div class="row"><div class="key"><input type="checkbox" id="seedRatioLimited"/><label for="seedRatioLimited">Stop seeding at ratio:</label></div>
+						<div class="row"><div class="key"><input type="checkbox" id="seedRatioLimited"/><label for="seedRatioLimited">Прекратить раздачу при рейтинге:</label></div>
                                                                  <div class="value"><input type="number" min="0" id="seedRatioLimit"/></div></div>
-						<div class="row"><div class="key"><input type="checkbox" id="idle-seeding-limit-enabled"/><label for="idle-seeding-limit-enabled">Stop seeding if idle for (min):</label></div>
+						<div class="row"><div class="key"><input type="checkbox" id="idle-seeding-limit-enabled"/><label for="idle-seeding-limit-enabled">Прекратить раздачу при простое (мин):</label></div>
                                                                  <div class="value"><input type="number" min="0" id="idle-seeding-limit"/></div></div>
 					</div>
 				</div>
 				<div id="prefs-page-speed">
 					<div class="prefs-section">
 						<div class="title">Ограничение скорости</div>
-						<div class="row"><div class="key"><input type="checkbox" id="speed-limit-up-enabled"/><label for="speed-limit-up-enabled">Отгрузка (kB/s):</label></div>
+						<div class="row"><div class="key"><input type="checkbox" id="speed-limit-up-enabled"/><label for="speed-limit-up-enabled">Отдача (кБ/с):</label></div>
                                                                  <div class="value"><input type="number" min="0" id="speed-limit-up"/></div></div>
-						<div class="row"><div class="key"><input type="checkbox" id="speed-limit-down-enabled"/><label for="speed-limit-down-enabled">Загрузка (kB/s):</label></div>
+						<div class="row"><div class="key"><input type="checkbox" id="speed-limit-down-enabled"/><label for="speed-limit-down-enabled">Загрузка (кБ/с):</label></div>
                                                                  <div class="value"><input type="number" min="0" id="speed-limit-down"/></div></div>
 					</div>
 					<div class="prefs-section">
 						<div class="title"><div id="alternative-speed-limits-title">Альтернативные ограничения скорости</div></div>
 						<div class="row" id="alternative-speed-limits-desc">Переопределять ограничения скорости в нормальном режиме вручную или по расписанию</div>
-						<div class="row"><div class="key">Отгрузка (kB/s):</div>
+						<div class="row"><div class="key">Отгрузка (кБ/с):</div>
                                                                  <div class="value"><input type="number" min="0" id="alt-speed-up"/></div></div>
-						<div class="row"><div class="key">Загрузка (kB/s):</div>
+						<div class="row"><div class="key">Загрузка (кБ/с):</div>
                                                                  <div class="value"><input type="number" min="0" id="alt-speed-down"/></div></div>
 						<div class="checkbox-row"><input type="checkbox" id="alt-speed-time-enabled"/><label for="alt-speed-time-enabled">Ограничевать скорость по расписанию</label></div>
 						<div class="row"><div class="key">От:</div>
@@ -151,12 +151,12 @@
 						                 	<option value="tolerated">Разрешить шифрование</option>
 						                 	<option value="preferred">Предпочитать шифрование</option>
 						                 	<option value="required">Требовать шифрование</option></select></div></div>
-						<div class="checkbox-row"><input type="checkbox" id="pex-enabled" title="PEX is a tool for exchanging peer lists with the peers you're connected to."/>
-						                          <label for="pex-enabled" title="PEX is a tool for exchanging peer lists with the peers you're connected to.">Используйте PEX, чтобы найти больше пиров</label></div>
-						<div class="checkbox-row"><input type="checkbox" id="dht-enabled" title="DHT is a tool for finding peers without a tracker."/>
-						                          <label for="dht-enabled" title="DHT is a tool for finding peers without a tracker.">Используйте DHT, чтобы найти больше пиров</label></div>
-						<div class="checkbox-row"><input type="checkbox" id="lpd-enabled" title="LPD is a tool for finding peers on your local network."/>
-						                          <label for="lpd-enabled" title="LPD is a tool for finding peers on your local network.">Используйте LPD, чтобы найти больше пиров</label></div>
+						<div class="checkbox-row"><input type="checkbox" id="pex-enabled" title="PEX - это технология обмена списками пиров с теми, к кому вы подключаетесь."/>
+						                          <label for="pex-enabled" title="PEX - это технология обмена списками пиров с теми, к кому вы подключаетесь.">Использовать PEX для поиска пиров</label></div>
+						<div class="checkbox-row"><input type="checkbox" id="dht-enabled" title="DHT - это технология поиска пиров без использования трекера."/>
+						                          <label for="dht-enabled" title="DHT - это технология поиска пиров без использования трекера.">Использовать DHT для поиска пиров</label></div>
+						<div class="checkbox-row"><input type="checkbox" id="lpd-enabled" title="LPD - это технология поиска пиров в вашей локальной сети."/>
+						                          <label for="lpd-enabled" title="LPD - это технология поиска пиров в вашей локальной сети.">Использовать LPD для поиска пиров</label></div>
 					</div>
 					<div class="prefs-section">
 						<div class="title">Список блокировок</div>
@@ -178,8 +178,8 @@
 					</div>
 					<div class="prefs-section">
 						<div class="title">Опции</div>
-						<div class="checkbox-row"><input type="checkbox" id="utp-enabled" title="uTP is a tool for reducing network congestion."/>
-						                          <label for="utp-enabled" title="uTP is a tool for reducing network congestion.">Включить uTP для одноранговой связи</label></div>
+						<div class="checkbox-row"><input type="checkbox" id="utp-enabled" title="uTP - технология снижения нагрузки на сеть."/>
+						                          <label for="utp-enabled" title="uTP - технология снижения нагрузки на сеть.">Включить uTP для одноранговой связи</label></div>
 					</div>
 				</div>
 			</div>
@@ -203,7 +203,7 @@
 					<div class="title">Активность</div>
 					<div class="row"><div class="key">Есть:</div><div class="value" id="inspector-info-have">&nbsp;</div></div>
 					<div class="row"><div class="key">Доступность:</div><div class="value" id="inspector-info-availability">&nbsp;</div></div>
-					<div class="row"><div class="key">Отгружено:</div><div class="value" id="inspector-info-uploaded">&nbsp;</div></div>
+					<div class="row"><div class="key">Отдано:</div><div class="value" id="inspector-info-uploaded">&nbsp;</div></div>
 					<div class="row"><div class="key">Загружено:</div><div class="value" id="inspector-info-downloaded">&nbsp;</div></div>
 					<div class="row"><div class="key">Состояние:</div><div class="value" id="inspector-info-state">&nbsp;</div></div>
 					<div class="row"><div class="key">Продолжительность:</div><div class="value" id="inspector-info-running-time">&nbsp;</div></div>
@@ -265,17 +265,17 @@
 		<div class="ui-helper-hidden" id="stats-dialog">
 			<div class="prefs-section">
 				<div class="title">Текущая сессия</div>
-				<div class="row"><div class="key">Отгружено:</div><div class="value" id='stats-session-uploaded'>&nbsp;</div></div>
+				<div class="row"><div class="key">Отдано:</div><div class="value" id='stats-session-uploaded'>&nbsp;</div></div>
 				<div class="row"><div class="key">Загружено:</div><div class="value" id='stats-session-downloaded'>&nbsp;</div></div>
-				<div class="row"><div class="key">Ratio:</div><div class="value" id='stats-session-ratio'>&nbsp;</div></div>
+				<div class="row"><div class="key">Рейтинг:</div><div class="value" id='stats-session-ratio'>&nbsp;</div></div>
 				<div class="row"><div class="key">Продолжительность:</div><div class="value" id='stats-session-duration'>&nbsp;</div></div>
 			</div>
 			<div class="prefs-section">
 				<div class="title">Всего</div>
 				<div class="row"><div class="key">Запущено:</div><div class="value" id='stats-total-count'>&nbsp;</div></div>
-				<div class="row"><div class="key">Отгружено:</div><div class="value" id='stats-total-uploaded'>&nbsp;</div></div>
+				<div class="row"><div class="key">Отдано:</div><div class="value" id='stats-total-uploaded'>&nbsp;</div></div>
 				<div class="row"><div class="key">Загружено:</div><div class="value" id='stats-total-downloaded'>&nbsp;</div></div>
-				<div class="row"><div class="key">Ratio:</div><div class="value" id='stats-total-ratio'>&nbsp;</div></div>
+				<div class="row"><div class="key">Рейтинг:</div><div class="value" id='stats-total-ratio'>&nbsp;</div></div>
 				<div class="row"><div class="key">Продолжительность:</div><div class="value" id='stats-total-duration'>&nbsp;</div></div>
 			</div>
 		</div>
@@ -292,10 +292,10 @@
 							<input type="file" name="torrent_files[]" id="torrent_upload_file" multiple="multiple" />
 						<label for="torrent_upload_url">Или введите URL-адрес:</label>
 							<input type="url" id="torrent_upload_url"/>
-						<label id='add-dialog-folder-label' for="add-dialog-folder-input">Папка назначения:</label>
+						<label id='add-dialog-folder-label' for="add-dialog-folder-input">Папка для загрузки:</label>
 							<input type="text" id="add-dialog-folder-input"/>
 							<input type="checkbox" id="torrent_auto_start" />
-						<label for="torrent_auto_start" id="auto_start_label">Начать при добавлении</label>
+						<label for="torrent_auto_start" id="auto_start_label">Запустить при добавлении</label>
 					</div>
 					<a href="#upload" id="upload_confirm_button">Загрузить</a>
 					<a href="#cancel" id="upload_cancel_button">Отмена</a>
@@ -354,52 +354,52 @@
 				<li>Общая скорость загрузки
 					<ul id="footer_download_rate_menu">
 						<li radio-group="download-rate" id="unlimited_download_rate"><span class='ui-icon ui-icon-bullet'></span>Неограниченна</li>
-						<li radio-group="download-rate" id="limited_download_rate">Лимит (10 kB/s)</li>
+						<li radio-group="download-rate" id="limited_download_rate">Лимит (10 кБ/с)</li>
 						<li>---</li>
-						<li class='download-speed'>5 kB/s</li>
-						<li class='download-speed'>10 kB/s</li>
-						<li class='download-speed'>20 kB/s</li>
-						<li class='download-speed'>30 kB/s</li>
-						<li class='download-speed'>40 kB/s</li>
-						<li class='download-speed'>50 kB/s</li>
-						<li class='download-speed'>75 kB/s</li>
-						<li class='download-speed'>100 kB/s</li>
-						<li class='download-speed'>150 kB/s</li>
-						<li class='download-speed'>200 kB/s</li>
-						<li class='download-speed'>250 kB/s</li>
-						<li class='download-speed'>500 kB/s</li>
-						<li class='download-speed'>750 kB/s</li>
+						<li class='download-speed'>5 кБ/с</li>
+						<li class='download-speed'>10 кБ/с</li>
+						<li class='download-speed'>20 кБ/с</li>
+						<li class='download-speed'>30 кБ/с</li>
+						<li class='download-speed'>40 кБ/с</li>
+						<li class='download-speed'>50 кБ/с</li>
+						<li class='download-speed'>75 кБ/с</li>
+						<li class='download-speed'>100 кБ/с</li>
+						<li class='download-speed'>150 кБ/с</li>
+						<li class='download-speed'>200 кБ/с</li>
+						<li class='download-speed'>250 кБ/с</li>
+						<li class='download-speed'>500 кБ/с</li>
+						<li class='download-speed'>750 кБ/с</li>
 					</ul>
 				</li>
 				<li>Общая скорость отгрузки
 					<ul id="footer_upload_rate_menu">
 						<li radio-group="upload-rate" id="unlimited_upload_rate"><span class='ui-icon ui-icon-bullet'></span>Неограниченна</li>
-						<li radio-group="upload-rate" id="limited_upload_rate">Лимит (10 kB/s)</li>
+						<li radio-group="upload-rate" id="limited_upload_rate">Лимит (10 кБ/с)</li>
 						<li>---</li>
-						<li class='upload-speed'>5 kB/s</li>
-						<li class='upload-speed'>10 kB/s</li>
-						<li class='upload-speed'>20 kB/s</li>
-						<li class='upload-speed'>30 kB/s</li>
-						<li class='upload-speed'>40 kB/s</li>
-						<li class='upload-speed'>50 kB/s</li>
-						<li class='upload-speed'>75 kB/s</li>
-						<li class='upload-speed'>100 kB/s</li>
-						<li class='upload-speed'>150 kB/s</li>
-						<li class='upload-speed'>200 kB/s</li>
-						<li class='upload-speed'>250 kB/s</li>
-						<li class='upload-speed'>500 kB/s</li>
-						<li class='upload-speed'>750 kB/s</li>
+						<li class='upload-speed'>5 кБ/с</li>
+						<li class='upload-speed'>10 кБ/с</li>
+						<li class='upload-speed'>20 кБ/с</li>
+						<li class='upload-speed'>30 кБ/с</li>
+						<li class='upload-speed'>40 кБ/с</li>
+						<li class='upload-speed'>50 кБ/с</li>
+						<li class='upload-speed'>75 кБ/с</li>
+						<li class='upload-speed'>100 кБ/с</li>
+						<li class='upload-speed'>150 кБ/с</li>
+						<li class='upload-speed'>200 кБ/с</li>
+						<li class='upload-speed'>250 кБ/с</li>
+						<li class='upload-speed'>500 кБ/с</li>
+						<li class='upload-speed'>750 кБ/с</li>
 					</ul>
 				</li>
 				<li>---</li>
 				<li>Сортировать по
 					<ul id="footer_sort_menu">
-						<li radio-group="sort-mode" id="sort_by_queue_order">Порядоку очередей</li>
+						<li radio-group="sort-mode" id="sort_by_queue_order">Порядку очередей</li>
 						<li radio-group="sort-mode" id="sort_by_activity">Активности</li>
 						<li radio-group="sort-mode" id="sort_by_age">Возрасту</li>
 						<li radio-group="sort-mode" id="sort_by_name">Имени</li>
 						<li radio-group="sort-mode" id="sort_by_percent_completed">Прогрессу</li>
-						<li radio-group="sort-mode" id="sort_by_ratio">Ratio</li>
+						<li radio-group="sort-mode" id="sort_by_ratio">Рейтингу</li>
 						<li radio-group="sort-mode" id="sort_by_size">Размеру</li>
 						<li radio-group="sort-mode" id="sort_by_state">Состоянию</li>
 						<li>---</li>
@@ -426,7 +426,7 @@
 			<li data-command="move">Установить место нахождения…</li>
 			<li data-command="rename">Переименовать…</li>
 			<li>---</li>
-			<li data-command="reannounce">Ask tracker for more peers</li>
+			<li data-command="reannounce">Запросить у трекера больше пиров</li>
 			<li>---</li>
 			<li data-command="select_all">Выбрать всё</li>
 			<li data-command="deselect_all">Отменить выбор всего</li>
